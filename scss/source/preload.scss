@@ -1,0 +1,30 @@
+#ht-preload {
+    z-index: 99999999999999999;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #333;
+    text-align: center;
+    .inner {
+        margin-top: -5px;
+        top: 50%;
+        position: absolute;
+        left: 0;
+        width: 100%;
+        .animation-container {
+            margin-left: -15px;
+        }
+        .loader{
+            -webkit-backface-visibility: hidden;
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            margin: 0 auto;
+            -webkit-animation: typing-preloader 1s linear infinite alternate;
+               -moz-animation: typing-preloader 1s linear infinite alternate;
+                    animation: typing-preloader 1s linear infinite alternate;
+        }
+    }
+}

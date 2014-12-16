@@ -1,0 +1,55 @@
+/*
+This is the visible area of you carousel.
+Set a width here to define how much items are visible.
+The width can be either fixed in px or flexible in %.
+Position must be relative!
+*/
+.jcarousel {
+    position: relative;    
+}
+
+/*
+This is the container of the carousel items.
+You must ensure that the position is relative or absolute and
+that the width is big enough to contain all items.
+*/
+.jcarousel .my-jcarousel {
+    width: 20000em;
+    position: relative;
+
+    /* Optional, required in this case since it's a <ul> element */
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+/*
+These are the item elements. jCarousel works best, if the items
+have a fixed width and height (but it's not required).
+*/
+.jcarousel article {
+    /* Required only for block elements like <li>'s */
+    float: left;
+}
+
+.jcarousel-control {       
+    position: relative;    
+    margin-top: -18px;
+}
+
+.jcarousel-control .jcarousel-prev,
+.jcarousel-control .jcarousel-next {
+    position: absolute;    
+    padding: 2px 9px;
+    background: #000;
+    border-radius: 50%;
+    color: #fff;
+}
+
+.jcarousel-control .jcarousel-prev {        
+    left: 540px;
+}
+
+.jcarousel-control .jcarousel-next {    
+    left: 580px;
+}

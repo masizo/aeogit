@@ -1,0 +1,2 @@
+#!/bin/bash
+scss source/_output.scss:../css/style.css --watch -C

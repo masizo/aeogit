@@ -1,0 +1,1 @@
+scss source/style-switcher.scss:../css/style-switcher.css -w --style compressed -C

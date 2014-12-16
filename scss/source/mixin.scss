@@ -1,0 +1,117 @@
+// SirThink Mixin
+// M A R G I N   _   P A D D I N G
+@mixin section-padding {
+	padding-top: 100px;
+	padding-bottom: 100px;
+}
+@mixin margin-tb($value) {
+	margin-top: $value;
+	margin-bottom: $value;
+}
+@mixin margin-t-b($value1, $value2) {
+	margin-top: $value1;
+	margin-bottom: $value2;
+}
+@mixin padding-tb($value) {
+	padding-top: $value;
+	padding-bottom: $value;
+}
+@mixin padding-t-b($value1, $value2) {
+	padding-top: $value1;
+	padding-bottom: $value2;
+}
+// T R A N S I T I O N   _   T R A N S F O R M
+@mixin transition($value) {
+	-webkit-transition: $value;
+	-moz-transition: $value;
+	-o-transition: $value;
+	-ms-transition: $value;
+	transition: $value;
+}
+@mixin transition-property($value) {
+	-webkit-transition-property: $value;
+	-moz-transition-property: $value;
+	-ms-transition-property: $value;
+	-o-transition-property: $value;
+	transition-property: $value;
+}
+@mixin transform($value) {
+	-webkit-transform: $value;
+	-moz-transform: $value;
+	-o-transform: $value;
+	-ms-transform: $value;
+}
+// O P A C I T Y
+@mixin opacity($opacity) {
+	opacity: $opacity;
+	$opacity-ie: $opacity * 100;
+	filter: alpha(opacity=$opacity-ie); //IE8
+}
+// B O R D E R   _   R A D I U S
+@mixin border-radius($a, $b, $c, $d) {
+	-webkit-border-radius: $a $b $c $d;
+	-moz-border-radius: $a $b $c $d;
+	border-radius: $a $b $c $d;
+}
+// A N I M A T I O N
+@mixin ht-animation($time,$name) {
+	-webkit-animation-duration: $time;
+	animation-duration: $time;
+	animation-timing-function: ease;
+	-webkit-animation-timing-function: ease;
+	-webkit-animation-name: $name;
+	animation-name: $name;
+}
+
+// C L E A R - F I X
+%clearfix {
+	*zoom: 1;
+	&:before, &:after {
+		content: " ";
+		display: table;
+	}
+	&:after {
+		clear: both;
+	}
+}
+// V I S U A L   H I D D E N
+%visuallyhidden {
+	margin: -1px;
+	padding: 0;
+	width: 1px;
+	height: 1px;
+	overflow: hidden;
+	clip: rect(0 0 0 0);
+	clip: rect(0, 0, 0, 0);
+	position: absolute;
+}
+// B R E A K   _   P O I N T
+@mixin bp($point) {
+	@if $point == blw_lg {
+		@media (max-width: 1199px) { @content; }
+	}
+	@else if $point == blw_md {
+		@media (max-width: 991px) { @content; }
+	}
+	@else if $point == blw_sm {
+		@media (max-width: 767px) { @content; }
+	}
+	@else if $point == abv_lg {
+		@media (min-width: 1200px) { @content; }
+	}
+	@else if $point == abv_md {
+		@media (min-width: 992px) { @content; }
+	}
+	@else if $point == abv_xs {
+		@media (min-width: 480px) { @content; }
+	}
+	@else if $point == abv_sm {
+		@media (min-width: 768px) { @content; }
+	}
+	@else if $point == bwn_lg_md {
+		@media (max-width: 1199px) and (min-width: 992px) { @content; }
+	}
+	@else if $point == bwn_md_sm {
+		@media (max-width: 991px) and (min-width: 768px) { @content; }
+	}
+}
