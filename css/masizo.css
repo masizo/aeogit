@@ -35,21 +35,39 @@ ul{
 }
 
 .img-logo{
-	width: 90%;
-	transition: all 1s;
+	position: absolute;
+	z-index: 10;
+	margin: 40px 0px 0px 40px;
+	transition: 1s;
+	
 }
 
-.img-logo:hover{
-	width: 50%;
-	transition: all 1s;
+
+
+.next-section-slider{
+	position: absolute;
+	z-index: 10;
+	margin-top: 300px;
+	margin-left: 48%;	
 }
+
+.texto-slider{
+	position: absolute;
+	z-index: 10;
+	margin-top: 200px;
+	text-align: center;
+	width: 100%;
+	color: white;
+	font-size: 1.3em;
+}
+
 
 .fondo{
 	background: #2c2929;
 }
 
 .logo{
-	background: url(../images/placeholder/logo_aeo.png) no-repeat;
+	background: url(../images/placeholder/aeo.png) no-repeat;
 	height: 60px;
 	transition: 1s;	
 }
