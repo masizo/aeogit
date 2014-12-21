@@ -9,10 +9,13 @@ Tepic, Nayarit, México.
 
 
 /************* RESET ***********/
+
+
 body{
 	background: ;
 	width: 100%;
 	font-family: 'Rokkitt', serif;
+	height: 100%;
 }
 
 a{
@@ -34,12 +37,20 @@ ul{
 	width: 100%;
 }
 
+.img-slider{
+	background: url(..images/builds-1.jpg) center center cover no-repeat fixed;
+}
+
 .img-logo{
 	position: absolute;
 	z-index: 10;
 	margin: 40px 0px 0px 40px;
 	transition: 1s;
 	
+}
+
+.absolute{
+	position: absolute;
 }
 
 
@@ -59,6 +70,55 @@ ul{
 	width: 100%;
 	color: white;
 	font-size: 1.3em;
+}
+
+#carousel-example-generic{
+	height: 100%;
+}
+
+.carousel{
+	height: 100%;
+}
+
+.carousel>.item{
+	height: 100%;
+}
+
+.carousel>.item>img{
+	height: 100%;
+}
+
+@media (max-width:768px){
+	.texto-slider{
+		font-size: 1em;
+		margin-top: 50px;
+		text-align: right;
+		width: 70%;
+		margin-left: 25%;
+	}
+
+	.next-section-slider{
+		margin-top: 100px;
+
+	}
+
+	#carousel-example-generic{
+		height: 100%;
+	}
+
+	.carousel{
+		height: 100%;
+	}
+
+	.img-logo{
+		width: 20%;
+		position: absolute;
+		z-index: 10;
+		margin: 40px 0px 0px 40px;
+		transition: 1s;
+	
+}
+
 }
 
 
@@ -254,6 +314,8 @@ border: 0;
  			/******** Altos   ********/
 
  			.hauto{height: auto;}
+
+
 
  			.h10{height: 10px;}
  			.h20{height: 20px;}
